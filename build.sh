@@ -10,7 +10,7 @@ set -e
 ##----------------------------------------------------------##
 # Basic Information
 KERNEL_DIR="$(pwd)"
-VERSION=Apex-v1.5
+VERSION=Neon-v1.6
 MODEL=Xiaomi
 DEVICE=MiAtoll
 DEFCONFIG=cust_defconfig
@@ -42,7 +42,7 @@ ZIPNAME=Velvet
 FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-${TANGGAL}.zip
 
 # Disable -Werror
-if [[ "$TOOLCHAIN" == "eva" || "$TOOLCHAIN" == "nexus12" ]]; then
+if [[ "$TOOLCHAIN" == "eva" || "$TOOLCHAIN" == "reaPeR1010" ]]; then
 sed -i 's/CONFIG_WERROR=y/# CONFIG_WERROR is not set/' arch/arm64/configs/${DEFCONFIG}
 fi
 
